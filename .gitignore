@@ -1,0 +1,6 @@
+*un~
+*.framework
+.DS_Store
+project.xcworkspace/
+xcuserdata/
+Secrets/

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LuL-81-Xq1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="ODH-AA-w9H">
+            <objects>
+                <viewController id="LuL-81-Xq1" customClass="CWSChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xIV-Zt-EgJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENC-Pq-VSo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" type="user" id="mP9-nR-q00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udX-6E-JI6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="364" type="user" id="F9k-Vw-pTs"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="TY4-4J-vsb" detailTextLabel="TBz-kj-KET" style="IBUITableViewCellStyleSubtitle" id="o1D-Dm-b6x">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY4-4J-vsb">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBz-kj-KET">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-Ry-1gb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cNe-Aa-Ohd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stephanie">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nameButtonPressed:" destination="LuL-81-Xq1" eventType="touchUpInside" id="Ckt-sU-2vT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gUg-Ry-1gb" firstAttribute="centerX" secondItem="ENC-Pq-VSo" secondAttribute="centerX" type="default" id="DJP-dy-9CK"/>
+                            <constraint firstAttribute="trailing" secondItem="ENC-Pq-VSo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MRQ-2v-Euu"/>
+                            <constraint firstItem="udX-6E-JI6" firstAttribute="bottom" secondItem="xIV-Zt-EgJ" secondAttribute="bottom" type="default" id="RGu-dd-6Sx"/>
+                            <constraint firstItem="gUg-Ry-1gb" firstAttribute="top" secondItem="xIV-Zt-EgJ" secondAttribute="top" constant="15" id="UlJ-Io-hf5"/>
+                            <constraint firstItem="ENC-Pq-VSo" firstAttribute="leading" secondItem="xIV-Zt-EgJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="f4B-oa-W2i"/>
+                            <constraint firstItem="ENC-Pq-VSo" firstAttribute="top" secondItem="xIV-Zt-EgJ" secondAttribute="top" constant="58" type="user" id="fjZ-2Q-nBI"/>
+                            <constraint firstItem="udX-6E-JI6" firstAttribute="trailing" secondItem="xIV-Zt-EgJ" secondAttribute="trailing" type="default" id="itJ-6W-nqE"/>
+                            <constraint firstItem="udX-6E-JI6" firstAttribute="leading" secondItem="xIV-Zt-EgJ" secondAttribute="leading" type="default" id="tjT-QM-taU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatzTableView" destination="udX-6E-JI6" id="rLJ-eF-bLq"/>
+                        <outlet property="inputzTextField" destination="ENC-Pq-VSo" id="c4e-fm-W2D"/>
+                        <outlet property="nameButton" destination="gUg-Ry-1gb" id="3iZ-HP-NVv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycs-42-400" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="139"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CWSChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWSChatViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nameButtonPressed:"/>
+                <relationship kind="outlet" name="chatzTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="inputzTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
